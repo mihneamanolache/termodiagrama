@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termodiagrama</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body class="m-4 text-center">
+    <button data-clipboard-target="#termodiagrama" class="btn btn-success form-control mb-4">Copy</button>
+    <div id="termodiagrama" class="">
+        <div>
+            ID: <span id="regNo"></span><br>
+            Start date: <span id="today"></span> <span id="startTime"></span><br>
+            Sample rate: 900sec.<br>
+            Unit: *C<br><br>
+            &nbsp;&nbsp;Date   Hour  Temp<br>
+            <div id="values"></div>
+        </div>
+        
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
+<script src="./termodiagrama.js"></script>
+<script>
+    const clipboard = new ClipboardJS('.btn');
+    clipboard.on('success', function(e) {
+        swal ( "Done" ,  "You can print the file!" ,  "success", {
+            button:false
+        } )
+    });
+</script>
+</html>
