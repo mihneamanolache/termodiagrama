@@ -6,8 +6,8 @@ const regNo = params.regNo;
 document.getElementById('regNo').innerHTML = regNo.toUpperCase()
 
 // Set date 
-const date = new Date();
-document.getElementById('today').innerHTML = `${date.getDay()}-${date.getMonth()+1}-${date.getFullYear().toString().slice(2,)}`
+const date = new Date(Date.now());
+document.getElementById('today').innerHTML = `${date.getDate()}-${date.getMonth()+1}-${date.getFullYear().toString().slice(2,)}`
 
 // Set start hour
 const h = Math.floor(5 + Math.random()*(7 - 5))
@@ -28,7 +28,7 @@ while (startDate < Date.now()) {
 hours.push(new Date(Date.now()).toLocaleTimeString([], { timeStyle: "short" }))
 
 hours.reverse().forEach(element => {
-    html += `${i}&nbsp;&nbsp;${date.getDay()}-${date.getMonth()+1}&nbsp;&nbsp;${element}&nbsp;&nbsp;${(Math.random() * (4 - 0) + 0).toFixed(1)}<br>`
+    html += `${i}&nbsp;&nbsp;${date.getDate()}-${date.getMonth()+1}&nbsp;&nbsp;${element}&nbsp;&nbsp;${(Math.random() * (4 - 0) + 0).toFixed(1)}<br>`
     i+=1
 });
 
