@@ -28,7 +28,7 @@ while (startDate < Date.now()) {
 hours.push(new Date(Date.now()).toLocaleTimeString([], { timeStyle: "short" }))
 
 hours.reverse().forEach(element => {
-    html += `${i}&nbsp;&nbsp;${date.getDate()}-${date.getMonth()+1}&nbsp;&nbsp;${element}&nbsp;&nbsp;${(Math.random() * (4 - 0) + 0).toFixed(1)}<br>`
+    html += `${i} ${date.getDate()}-${date.getMonth()+1} ${element} ${(Math.random() * (4 - 0) + 0).toFixed(1)}<br>`
     i+=1
 });
 
